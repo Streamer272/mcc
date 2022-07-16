@@ -29,6 +29,7 @@ mcc_sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'tables.py',
 ]
 
 install_data(mcc_sources, install_dir: moduledir)
