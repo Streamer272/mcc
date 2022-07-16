@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=mcc
+Exec=mcc
+Icon=com.streamer272.MCC
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

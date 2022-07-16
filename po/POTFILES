@@ -1,0 +1,7 @@
+data/com.streamer272.MCC.desktop.in
+data/com.streamer272.MCC.appdata.xml.in
+data/com.streamer272.MCC.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
