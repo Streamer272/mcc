@@ -53,7 +53,7 @@
             </child>
             <child>
               <object class="GtkLabel" id="label_in">
-                <property name="label">X</property>
+                <property name="label"></property>
               </object>
             </child>
           </object>
@@ -86,7 +86,7 @@
             </child>
             <child>
               <object class="GtkLabel" id="label_out">
-                <property name="label">X</property>
+                <property name="label"></property>
               </object>
             </child>
           </object>

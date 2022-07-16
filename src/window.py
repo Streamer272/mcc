@@ -16,14 +16,46 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from gi.repository import Gtk
+from .tables import morse_in, morse_out
 
 
 @Gtk.Template(resource_path='/com/streamer272/MCC/gtk/window.ui')
 class MccWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'MccWindow'
 
+    entry_in = Gtk.Template.Child()
+    button_in = Gtk.Template.Child()
+    label_in = Gtk.Template.Child()
+    entry_out = Gtk.Template.Child()
+    button_out = Gtk.Template.Child()
+    label_out = Gtk.Template.Child()
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        self.entry_in.connect('activate', lambda _: self.convert(self.entry_in, self.label_in, True))
+        self.button_in.connect('clicked', lambda _: self.convert(self.entry_in, self.label_in, True))
+        self.entry_out.connect('activate', lambda _: self.convert(self.entry_out, self.label_out, False))
+        self.button_out.connect('clicked', lambda _: self.convert(self.entry_out, self.label_out, False))
+
+    def convert(self, entry, label, type_in):
+        table = morse_in if type_in else morse_out
+        text = entry.get_text().lower()
+        result = ""
+
+        for i in text.split(" ") if type_in else text:
+            if (i == " "):
+                continue
+
+            value = table.get(i)
+            if value is None:
+                result += "?"
+            else:
+                result += value
+                if not type_in:
+                    result += "  "
+
+        label.set_text(result)
 
 
 class AboutDialog(Gtk.AboutDialog):
