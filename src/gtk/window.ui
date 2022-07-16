@@ -16,6 +16,7 @@
     </child>
     <child>
       <object class="GtkBox">
+        <property name="orientation">horizontal</property>
         <property name="homogeneous">true</property>
         <property name="hexpand">true</property>
         <property name="vexpand">true</property>
@@ -26,13 +27,58 @@
         <property name="margin-end">8</property>
 
         <child>
-          <object class="GtkLabel">
-            <property name="label">Label 1</property>
+          <object class="GtkBox" id="ms_in">
+            <property name="orientation">vertical</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property name="spacing">10</property>
+
+            <child>
+              <object class="GtkEntry" id="entry_in">
+                <property name="placeholder-text">Enter morse code</property>
+                <property name="vexpand-set">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">means</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_in">
+                <property name="label">X</property>
+              </object>
+            </child>
           </object>
         </child>
+
         <child>
-          <object class="GtkLabel">
-            <property name="label">Label 2</property>
+          <object class="GtkBox" id="ms_out">
+            <property name="orientation">vertical</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
+            <property name="hexpand">true</property>
+            <property name="vexpand">true</property>
+            <property name="spacing">10</property>
+
+            <child>
+              <object class="GtkEntry" id="entry_out">
+                <property name="placeholder-text">Enter text</property>
+                <property name="vexpand-set">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">means</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_out">
+                <property name="label">X</property>
+              </object>
+            </child>
           </object>
         </child>
       </object>
