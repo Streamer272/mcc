@@ -22,8 +22,6 @@ from gi.repository import Gtk
 class MccWindow(Gtk.ApplicationWindow):
     __gtype_name__ = 'MccWindow'
 
-    label = Gtk.Template.Child()
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 

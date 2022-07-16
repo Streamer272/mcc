@@ -3,5 +3,7 @@
   <gresource prefix="/com/streamer272/MCC">
     <file>gtk/window.ui</file>
     <file>gtk/help-overlay.ui</file>
+
+    <file>icons/arrow1-down-symbolic.svg</file>
   </gresource>
 </gresources>

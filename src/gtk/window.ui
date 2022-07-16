@@ -36,14 +36,19 @@
             <property name="spacing">10</property>
 
             <child>
+              <object class="GtkLabel">
+                <property name="label">Morse to Text</property>
+              </object>
+            </child>
+            <child>
               <object class="GtkEntry" id="entry_in">
                 <property name="placeholder-text">Enter morse code</property>
                 <property name="vexpand-set">true</property>
               </object>
             </child>
             <child>
-              <object class="GtkLabel">
-                <property name="label">means</property>
+              <object class="GtkButton" id="button_in">
+                <property name="icon-name">arrow1-down-symbolic</property>
               </object>
             </child>
             <child>
@@ -64,14 +69,19 @@
             <property name="spacing">10</property>
 
             <child>
+              <object class="GtkLabel">
+                <property name="label">Text to Morse</property>
+              </object>
+            </child>
+            <child>
               <object class="GtkEntry" id="entry_out">
                 <property name="placeholder-text">Enter text</property>
                 <property name="vexpand-set">true</property>
               </object>
             </child>
             <child>
-              <object class="GtkLabel">
-                <property name="label">means</property>
+              <object class="GtkButton" id="button_out">
+                <property name="icon-name">arrow1-down-symbolic</property>
               </object>
             </child>
             <child>
